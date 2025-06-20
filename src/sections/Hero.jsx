@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { words } from '../constants/index.js';
 import Button from '../components/Button.jsx';
 import HeroExperience from '../components/HeroModels/HeroExperience.jsx';
@@ -11,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const heroRef = useRef(null);
+  const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
 
   useGSAP(
     () => {
@@ -36,7 +38,6 @@ const Hero = () => {
 
   return (
     <section id="hero" ref={heroRef} className="relative overflow-hidden">
-      {/* Background Image */}
       <div className="absolute top-0 left-0 z-10">
         <img src="/images/bg.png" alt="background" />
       </div>
@@ -63,7 +64,6 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-
               <h1>into Reality</h1>
               <h1>that Deliver Results</h1>
             </div>
@@ -73,15 +73,27 @@ const Hero = () => {
             </p>
 
             <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my Work" />
+
+            {isTablet && (
+              <div className="flex justify-center items-center mt-4 ">
+                <img
+                  src="/images/profile.png"
+                  alt="Hero fallback"
+                  className=" w-auto h-auto object-contain"
+                  loading="lazy"
+                />
+              </div>
+            )}
           </div>
         </header>
 
-        {/* 3D Model */}
-        <figure>
-          <div className="hero-3d-layout">
-            <HeroExperience />
-          </div>
-        </figure>
+        {!isTablet && (
+          <figure>
+            <div className="hero-3d-layout">
+              <HeroExperience />
+            </div>
+          </figure>
+        )}
       </div>
 
       <AnimatedCounter />

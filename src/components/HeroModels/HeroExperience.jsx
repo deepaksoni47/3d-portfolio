@@ -9,6 +9,20 @@ import Particles from './Particles';
 const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  // // Fallback image for mobile/tablet
+  // if (isTablet) {
+  //   return (
+  //     <div className="w-full h-[400px] flex justify-center items-center overflow-hidden">
+  //       <img
+  //         src="/images/profile.png" // your image path
+  //         alt="Hero fallback"
+  //         className="object-cover w-full h-full"
+  //         loading="lazy"
+  //       />
+  //     </div>
+  //   );
+  // }
+
 
   return (
     <Canvas
