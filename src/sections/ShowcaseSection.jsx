@@ -12,14 +12,14 @@ const ShowcaseSection = () => {
   const project3Ref = useRef(null);
 
   useGSAP(() => {
-    // Fade in the whole section
+    // Fade in section on mount
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
       { opacity: 1, duration: 1.5 }
     );
 
-    // Animate each project card when scrolled into view
+    // Animate cards on scroll
     const cards = [project1Ref.current, project2Ref.current, project3Ref.current];
 
     cards.forEach((card, index) => {
@@ -31,43 +31,47 @@ const ShowcaseSection = () => {
             y: 0,
             opacity: 1,
             duration: 1,
-            delay: 0.3 * index,
+            delay: 0.2 * index,
             scrollTrigger: {
               trigger: card,
               start: 'top bottom-=100',
               toggleActions: 'play none none none',
-            }
+            },
           }
         );
       }
     });
-  }, []); // Empty deps => run once on mount after refs are set
+  }, { scope: sectionRef });
 
   return (
     <section id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
         <div className="showcaselayout">
+          {/* Project 1 */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
-              <img src="/images/Lodgify.png" alt="Project1" />
+              <img src="/images/Lodgify.png" alt="Lodgify" />
             </div>
             <div className="text-content">
-              <h2>Lodgify a travel and listings platform.</h2>
+              <h2>Lodgify – A Travel & Listings Platform</h2>
               <p className="text-white-50 md:text-xl">
-                A fullstack app built with EJS, NodeJS & MongoDB for a fast and user-friendly experience.
+                A fullstack app built with EJS, Node.js & MongoDB for a fast and user-friendly experience.
               </p>
             </div>
           </div>
+
+          {/* Project 2 & 3 */}
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#ffefdb]">
-                <img src="/images/aura.png" alt="Project2" />
+                <img src="/images/aura.png" alt="Aura AI" />
               </div>
-              <h2>Aura AI – Mood Based Recommendation</h2>
+              <h2>Aura AI – Mood-Based Recommendation</h2>
             </div>
+
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/weather.png" alt="Project3" />
+                <img src="/images/weather.png" alt="Weather App" />
               </div>
               <h2>Weather App using React</h2>
             </div>
