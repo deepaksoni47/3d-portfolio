@@ -31,7 +31,7 @@ const HeroExperience = () => {
       <HeroLights />
 
       {/* Optional: use fewer particles on mobile */}
-      <Particles count={isMobile ? 30 : 80} />
+      {/* <Particles count={isMobile ? 30 : 80} /> */}
 
       <Suspense fallback={null}>
         <group
