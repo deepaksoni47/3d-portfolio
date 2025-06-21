@@ -79,7 +79,7 @@ const Hero = () => {
                 <img
                   src="/images/profile.avif"
                   alt="Hero fallback"
-                  className=" w-auto h-auto object-contain"
+                  className=" object-contain w-auto h-88 max-w-none "
                   loading="lazy"
                 />
               </div>
