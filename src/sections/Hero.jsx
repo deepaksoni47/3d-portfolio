@@ -80,7 +80,6 @@ const Hero = () => {
                   src="/images/profile.avif"
                   alt="Hero fallback"
                   className=" w-auto h-auto object-contain"
-                  loading="lazy"
                 />
               </div>
             )}
