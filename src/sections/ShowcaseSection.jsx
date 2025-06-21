@@ -50,7 +50,7 @@ const ShowcaseSection = () => {
           {/* Project 1 */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
-              <img src="/images/Lodgify.png" alt="Lodgify" />
+              <img src="/images/Lodgify.avif" alt="Lodgify"  loading='lazy'/>
             </div>
             <div className="text-content">
               <h2>Lodgify – A Travel & Listings Platform</h2>
@@ -64,14 +64,14 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#ffefdb]">
-                <img src="/images/aura.png" alt="Aura AI" />
+                <img src="/images/aura.avif" alt="Aura AI" loading='lazy'/>
               </div>
               <h2>Aura AI – Mood-Based Recommendation</h2>
             </div>
 
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/weather.png" alt="Weather App" />
+                <img src="/images/weather.avif" alt="Weather App"  loading='lazy'/>
               </div>
               <h2>Weather App using React</h2>
             </div>

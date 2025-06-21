@@ -21,8 +21,10 @@ const ContactExperience = () => {
   return (
     <Canvas
       shadows
-      camera={{ position: [0, 3, 7], fov: 45 }}
-      gl={{ antialias: false, toneMappingExposure: 1 }}
+      camera={{ position: [0, 3, 7], fov: 45 }} 
+      frameloop="demand" 
+      dpr={[1, 1.5]} 
+      gl={{ antialias: false, toneMappingExposure: 1,powerPreference: 'low-power' }}
     >
       {/* Lights */}
       {lights}

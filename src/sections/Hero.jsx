@@ -39,7 +39,7 @@ const Hero = () => {
   return (
     <section id="hero" ref={heroRef} className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="background" />
+        <img src="/images/bg.avif" alt="background" />
       </div>
 
       <div className="hero-layout">
@@ -77,7 +77,7 @@ const Hero = () => {
             {isTablet && (
               <div className="flex justify-center items-center mt-4 ">
                 <img
-                  src="/images/profile.png"
+                  src="/images/profile.avif"
                   alt="Hero fallback"
                   className=" w-auto h-auto object-contain"
                   loading="lazy"

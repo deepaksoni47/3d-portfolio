@@ -37,47 +37,47 @@ const counterItems = [
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/bootstrap.png",
+    imgPath: "/images/logos/bootstrap.avif",
   },
   {
-    imgPath: "/images/logos/express.png",
+    imgPath: "/images/logos/express.avif",
   },
   {
-    imgPath: "/images/logos/docker.png",
+    imgPath: "/images/logos/docker.avif",
   },
   {
-    imgPath: "/images/logos/java1.png",
+    imgPath: "/images/logos/java1.avif",
   },
   {
-    imgPath: "/images/logos/github.png",
+    imgPath: "/images/logos/github.avif",
   },
   {
-    imgPath: "/images/logos/reactjs.png",
+    imgPath: "/images/logos/reactjs.avif",
   },
   {
-    imgPath: "/images/logos/nodejs.png",
+    imgPath: "/images/logos/nodejs.avif",
   },
   {
-    imgPath: "/images/logos/nextjs.png",
+    imgPath: "/images/logos/nextjs.avif",
   },
 
   {
-    imgPath: "/images/logos/tailwind.png",
+    imgPath: "/images/logos/tailwind.avif",
   },
   {
-    imgPath: "/images/logos/python.png",
+    imgPath: "/images/logos/python.avif",
   },
   {
-    imgPath: "/images/logos/mysql.png",
+    imgPath: "/images/logos/mysql.avif",
   },
   {
-    imgPath: "/images/logos/mongodb.png",
+    imgPath: "/images/logos/mongodb.avif",
   },
   {
-    imgPath: "/images/logos/html-css.png",
+    imgPath: "/images/logos/html-css.avif",
   },
   {
-    imgPath: "/images/logos/javascript.png",
+    imgPath: "/images/logos/javascript.avif",
   },
 ];
 
@@ -88,12 +88,12 @@ const abilities = [
     desc: "Skilled at tackling complex challenges with clean efficient solutions.",
   },
   {
-    imgPath: "/images/code1.png",
+    imgPath: "/images/code1.avif",
     title: "MERN Developer",
     desc: "Building full-stack apps with modern,responsive designs.",
   },
   {
-    imgPath: "/images/growth1.png",
+    imgPath: "/images/growth1.avif",
     title: "Always Improving",
     desc: "Passionate about learning and growing with every project.",
   },
@@ -105,19 +105,19 @@ const techStackImgs = [
     imgPath: "/images/logos/react.png",
   },
   {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
+    name: "Java Developer",
+    imgPath: "/images/logos/java1.png",
   },
   {
     name: "Backend Developer",
     imgPath: "/images/logos/node.png",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
+    name: "Python Developer",
+    imgPath: "/images/logos/python.svg",
   },
   {
-    name: "Project Manager",
+    name: "Open Source Contributor",
     imgPath: "/images/logos/git.svg",
   },
 ];
@@ -158,8 +158,8 @@ const techStackIcons = [
 const expCards = [
   {
     review: "Deepak showed a solid understanding of cloud-based AI services and machine learning fundamentals. His project-based approach made him a valuable intern during our AI program.",
-    imgPath: "/images/edunet.png",
-    logoPath: "/images/aicte.png",
+    imgPath: "/images/edunet.avif",
+    logoPath: "/images/aicte.avif",
     title: "AI Intern – Edunet Foundation (Microsoft + AICTE)",
     date: "Apr 2025 – May 2025",
     responsibilities: [
@@ -170,8 +170,8 @@ const expCards = [
   },
   {
     review: "As a key member of the UDAAN club, Deepak led impactful improvements to the university magazine site. His work in styling and form management made a notable difference.",
-    imgPath: "/images/udaanlg.png",
-    logoPath: "/images/udaanrd.png",
+    imgPath: "/images/udaanlg.avif",
+    logoPath: "/images/udaanrd.avif",
     title: "Website Board Member – UDAAN Magazine Club",
     date: "Sep 2023 – Present",
     responsibilities: [

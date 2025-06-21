@@ -3,9 +3,11 @@ import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/models/contact/ContactExperience";
+import useIsDesktop from "../hooks/useIsDesktop"; // import the hook
 
 const Contact = () => {
   const formRef = useRef(null);
+  const isDesktop = useIsDesktop(); // use the hook
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -20,8 +22,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Show loading state
-
+    setLoading(true);
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -29,13 +30,11 @@ const Contact = () => {
         formRef.current,
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
-
-      // Reset form and stop loading
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("EmailJS Error:", error); // Optional: show toast
+      console.error("EmailJS Error:", error);
     } finally {
-      setLoading(false); // Always stop loading, even on error
+      setLoading(false);
     }
   };
 
@@ -47,6 +46,7 @@ const Contact = () => {
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
         />
         <div className="grid-12-cols mt-16">
+          {/* Contact Form */}
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl md:p-10 p-5">
               <form
@@ -100,16 +100,27 @@ const Contact = () => {
                       {loading ? "Sending..." : "Send Message"}
                     </p>
                     <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
+                      <img src="/images/arrow-down.svg" alt="arrow" loading="lazy" />
                     </div>
                   </div>
                 </button>
               </form>
             </div>
           </div>
+
+          {/* Visual Section */}
           <div className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-              <ContactExperience />
+            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden flex-center">
+              {isDesktop ? (
+                <ContactExperience />
+              ) : (
+                <img
+                  src="/images/contact.avif"
+                  alt="Contact illustration"
+                  className="object-contain max-h-96 w-full"
+                  loading="lazy"
+                />
+              )}
             </div>
           </div>
         </div>
